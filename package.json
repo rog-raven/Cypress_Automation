@@ -1,0 +1,12 @@
+{
+  "name": "cypress_automation",
+  "version": "1.0.0",
+  "description": "This project automates end-to-end testing for web applications using Cypress. It includes test cases, configurations, and setup for running tests locally and in CI/CD pipelines.",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
