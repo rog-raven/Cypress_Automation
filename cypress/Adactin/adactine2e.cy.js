@@ -4,6 +4,7 @@ describe('Complete Flow with Screenshots', () => {
         cy.visit('https://adactinhotelapp.com/');
         cy.screenshot('login-page'); // Take a screenshot of the login page
 
+        
         // Perform login
         cy.get('#username').type('rograven');
         cy.get('#password').type('17XS72');
