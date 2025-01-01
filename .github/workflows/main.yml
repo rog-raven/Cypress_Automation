@@ -36,9 +36,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # Install Cypress binary (if missing)
+      - name: Install Cypress binary
+        run: npx cypress install
+
       # Run Cypress Tests
       - name: Run Cypress Tests
-        run: npx cypress run --spec cypress/Adactin/adactine2e.cy.js
+        run: npx cypress run --spec cypress/e2e/adactinspec.cy.js
 
       # Upload Cypress Results
       - name: Upload Cypress Results
