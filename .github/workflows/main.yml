@@ -43,7 +43,13 @@ jobs:
       # Run Cypress Tests
       - name: Run Cypress Tests
         run: npx cypress run --spec cypress/e2e/adactinspec.cy.js
+        
 
+       # Run Cypress Tests
+      - name: Run Cypress Tests
+       run: npx cypress run --spec cypress/e2e/loginspec.cy.js
+
+       
       # Upload Cypress Results
       - name: Upload Cypress Results
         uses: actions/upload-artifact@v3
