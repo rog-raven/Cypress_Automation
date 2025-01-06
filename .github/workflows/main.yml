@@ -12,11 +12,13 @@ jobs:
   cypress:
     runs-on: ubuntu-latest
 
+
     steps:
       # Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v3
 
+        
       # Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -41,12 +43,12 @@ jobs:
         run: npx cypress install
 
       # Run Cypress Tests for adactinspec.cy.js
-      - name: Run Cypress Tests - Adactin Spec in firefox
-        run: npx cypress run --spec cypress/e2e/adactinspec.cy.js
+      - name: Run Cypress Tests - Adactin Spec 
+        run: npx cypress run --spec cypress/e2e/adactinspec.cy.js --browser electron
 
       # Run Cypress Tests for loginspec.cy.js
-      - name: Run Cypress Tests - Login Spec in chrome
-        run: npx cypress run --spec cypress/e2e/loginspec.cy.js
+      - name: Run Cypress Tests - Login Spec
+        run: npx cypress run --spec cypress/e2e/loginspec.cy.js --browser electron
 
       # Upload Cypress Results
       - name: Upload Cypress Results
