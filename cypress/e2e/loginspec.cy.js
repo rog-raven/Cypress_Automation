@@ -11,7 +11,5 @@ describe('Complete Flow with Screenshots', () => {
         // Take a screenshot after login
         cy.screenshot('after-login');
 
-        // Fill out the hotel booking form
-        // Add the remaining steps and screenshots here
     });
 });

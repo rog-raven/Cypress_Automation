@@ -40,16 +40,14 @@ jobs:
       - name: Install Cypress binary
         run: npx cypress install
 
-      # Run Cypress Tests
-      - name: Run Cypress Tests
+      # Run Cypress Tests for adactinspec.cy.js
+      - name: Run Cypress Tests - Adactin Spec in firefox
         run: npx cypress run --spec cypress/e2e/adactinspec.cy.js
-        
 
-       # Run Cypress Tests
-      - name: Run Cypress Tests
-       run: npx cypress run --spec cypress/e2e/loginspec.cy.js
+      # Run Cypress Tests for loginspec.cy.js
+      - name: Run Cypress Tests - Login Spec in chrome
+        run: npx cypress run --spec cypress/e2e/loginspec.cy.js
 
-       
       # Upload Cypress Results
       - name: Upload Cypress Results
         uses: actions/upload-artifact@v3
